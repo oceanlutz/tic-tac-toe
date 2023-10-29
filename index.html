@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="bg-black">
+    <div class="container-fluid title">
+    <!--using css to make a top element that's spaced how i wanted, with custom settings-->
+        <div>
+            <h2 class="row font-weight-light text-white text-center head">Tic Tac Toe</h2>
+            <div class="row">
+                <button class="col btn btn-outline-light font-weight-light restart" id="restart">Restart</button>
+                <!--p text below changes via javascript on each turn-->
+                <p class="col text-white pl-3" id="turn">Current Turn: O</p> 
+            </div>
+        </div>
+    </div>
+    <!--this div takes up the remaining 70% of the body-->
+    <div class="bg-black container-fluid body-new">
+        <!--the board is a set square in the center with 9 equally sized buttons-->
+        <!--the borders on the buttons were set in a way to resemble a grid-->
+        <div class="board bg-black">
+            <div class="row no-gutters">
+                <div class="col">
+                    <!--the values are used with javascript to determine win state-->
+                    <button type="button" class="btn-new btn-t btn-l btn-font" value="0"><h1 class="btn-font"></h1></button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn-new btn-t" value="1"><h1 class="btn-font"></h1></button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn-new btn-t btn-r" value="2"><h1 class="btn-font"></h1></button>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col">
+                    <button type="button" class="btn-new btn-m btn-l" value="3"><h1 class="btn-font"></h1></button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn-new btn-m" value="4"><h1 class="btn-font"></h1></button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn-new btn-m btn-r" value="5"><h1 class="btn-font"></h1></button>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col">
+                    <button type="button" class="btn-new btn-b btn-l" value="6"><h1 class="btn-font"></h1></button>
+                </div>  
+                <div class="col">
+                    <button type="button" class="btn-new btn-b" value="7"><h1 class="btn-font"></h1></button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn-new btn-b btn-r" value="8"><h1 class="btn-font"></h1></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--bootstrap modal is used here to display a simple message after game ends via draw or win-->
+    <div class="modal fade restart" id="win-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title font-weight-light">Player O Wins!</h1>
+                    <button type="button" class="btn restart" data-dismiss="modal">New Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- ---Prompt---
+    Using any of the tools you've worked with so far, create 
+    a game of Tic-Tac-Toe.
+
+    Create a Tic-Tac-Toe game grid using your HTML element 
+    of choice. 
+    
+    When a cell in the grid is clicked, an X or O should 
+    appear in that spot depending on whose turn it is.
+
+    A heading should say whether it is X's or O's turn and 
+    change with each move made.
+    
+    A button should be available to clear the grid and 
+    restart the game.
+    
+    When a player has won, or the board is full and the game 
+    results in a draw, a Bootstrap alert or similar 
+    Bootstrap component should appear across the screen 
+    announcing the winner.
+-->

@@ -1,0 +1,153 @@
+/*
+    /////////////////////////
+    ----element modifiers----
+    /////////////////////////
+*/
+
+html, body {
+    height: 100%
+}
+
+body{
+    margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+
+/* 
+    /////////////////////////////////
+    ----bootstrap class overrides----
+    /////////////////////////////////
+*/ 
+
+.btn:focus {
+    box-shadow: 0 0 0 0 black;
+}
+
+/*
+    //////////////////////
+    ----custom classes----
+    //////////////////////
+*/
+
+/*
+    darker bg because bootstrap's wasn't dark enough 
+*/
+.bg-black {
+    background-color: black;
+} 
+
+/*
+    class to make board a set size, the bootstrap grid
+    was frustrating in this regard. i then made it responsive
+    with @media for small screens, i believe i based this 
+    resolution choice on the resolution of an iphone 8
+*/
+.board {
+    width: 420px;
+    height: 420px;
+}
+
+@media screen and (max-width: 750px) {
+    .board {
+      width: 315px;
+      height: 315px;
+    }
+}
+
+/*
+    "flexing" my CSS knowledge (haha get it) to 
+    create new body stylings and buttons with
+    fonts that i enjoy more also
+*/
+.body-new {
+    
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-block-new {
+    display: block;
+    width: 100%;
+}
+
+.btn-font {
+    font-size: 7rem;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 750px) {
+    .btn-font {
+        font-size: 4.75rem;
+        font-weight: lighter;
+    }
+}
+
+.btn-new {
+    width: 140px;
+    height:140px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .btn-new {
+      width: 105px;
+      height: 105px;
+    }
+}
+
+.btn-b {
+    border-bottom-color: black;
+}
+
+.btn-l {
+    border-left-color: black;
+}
+
+.btn-r {
+    border-right-color: black;
+}  
+
+.btn-t {
+    border-top-color: black;
+}
+
+.head {
+    font-size: 3.5rem;
+    
+}
+
+@media screen and (max-width: 750px) {
+    .head {
+        font-size: 2.4rem;
+        font-weight: lighter;
+    }
+}
+
+/*
+    never found a use for this but i wish i did
+*/
+.paint-it-black {
+    color: black;
+    background-color: black;
+    border-color: black;
+}
+
+.title {
+    display: flex;
+    width:100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+}
